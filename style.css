@@ -1,12 +1,12 @@
 :root {
-    --dark: #241f18;
+    --dark: #241918;
     --light: #fff9ee;
     --on-dark: #fff9ee;
     --on-light: #241f18;
     --dark-accent: #3d3222;
     --light-accent: #ffe2ae;
     /* --attention: #ff4c30; */
-    --attention: #fbc093;
+    --attention: #f37f7f;
     --soft-attention: #fbc093;
 
     --xs: 4px;
@@ -173,4 +173,5 @@ button:hover {
 
 .dice-row {
     gap: 1rem;
+    color: var(--attention);
 }
