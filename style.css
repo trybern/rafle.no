@@ -48,15 +48,22 @@ html {
     font-size: var(--font-base);
     background-color: var(--dark);
     color: var(--on-dark);
+
 }
 
 body {
-    max-width: 40rem;
+    position: fixed;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
 }
 
 header,
 section,
 footer {
+    max-width: 40rem;
     padding: 2rem;
 }
 
@@ -167,11 +174,18 @@ button:hover {
 /* Terninger */
 
 .single-die {
-    font-size: 4rem;
+    font-size: 3rem;
     margin: 1rem 0;
 } 
+
+@media screen and (min-width: 769px) {
+    .single-die {
+        font-size: 5rem;
+    }
+}
 
 .dice-row {
     gap: 1rem;
     color: var(--attention);
+    height: fit-content;
 }
