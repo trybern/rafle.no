@@ -23,12 +23,12 @@
 <body>
     <section>
         <span id="my-dice" class="dice-row">
-            <p style="font-size: 4rem;">⚀ ⚁ ⚂ ⚃ ⚄ ⚅</p>
+            <p>⚀ ⚁ ⚂ ⚃ ⚄ ⚅</p>
         </span>
-        <span style="display: none" class="flex-row">
-            <button class="qtyButton" id="diceLess">Færre</button>
-            <p id="diceNumber" style="padding: 0.5rem; margin: 0.5rem;">5</p>
-            <button class="qtyButton" id="diceMore">Flere</button>
+        <span class="flex-row die-picker">
+            <button class="qtyButton" id="die-less" data-direction="-1"><span>&#8722;</span></button>
+            <input data-min="1" data-max="0" type="text" value="5" readonly="true" name="diceNumber" style="padding: 0.5rem; margin: 0.5rem;">
+            <button class="qtyButton" id="die-more" data-direction="1"><span>&#43;</span></button>
         </span>
     </section>
 
