@@ -40,7 +40,7 @@
 }
 
 * {
-    transition: 100ms ease-in-out;
+    transition: 100ms cubic-bezier(0.39, 0.575, 0.565, 1);
 }
 
 html {
@@ -159,7 +159,7 @@ button {
     color: var(--dark);
     min-width: 3rem;
     border-radius: 0.25rem;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 0.25rem;
     font-family: var(--font-main);
     font-variation-settings: "wght" 500;
     letter-spacing: 0.015rem;
@@ -170,6 +170,17 @@ button {
     font-size: 1.5rem;
 }
 
+.die-picker p:not(.die-picker button p) {
+    width: 2rem;
+    text-align: center;
+    line-height: 100%;
+}
+
+.die-picker button p {
+    margin: 0;
+    line-height: 1rem;
+}
+
 button:hover {
     background-color: var(--light);
     color: var(--dark-accent)
@@ -178,8 +189,8 @@ button:hover {
 /* Terninger */
 
 .single-die {
-    font-size: 3rem;
-    margin: 1rem 0;
+    font-size: 4rem;
+    margin: 2rem 0;
 } 
 
 @media screen and (min-width: 769px) {
@@ -193,3 +204,18 @@ button:hover {
     color: var(--attention);
     height: fit-content;
 }
+
+.testknapp {
+    background-color: var(--light);
+    color: var(--on-light);
+}
+
+.testknapp:hover {
+    background-color: var(--light-accent);
+    color: var(--dark-accent);
+}
+
+.ease1 {
+    transition: all cubic-bezier(.7, 0, .3, 1) 100ms;
+}
+
