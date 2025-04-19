@@ -170,7 +170,19 @@ button {
     font-variation-settings: "wght" 500;
     letter-spacing: 0.015rem;
     font-size: 0.9rem;
-    border: transparent
+    border: transparent;
+    cursor: pointer;
+}
+
+#extra-actions > button {
+    background-color: var(--dark-accent);
+    color: var(--on-dark);
+    padding: 0.5rem 1rem;
+}
+
+#extra-actions > button:hover {
+    background-color: var(--light);
+    color: var(--dark-accent);
 }
 
 .die-picker button {

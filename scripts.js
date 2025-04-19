@@ -51,3 +51,17 @@ function removeDie() {
     }
 }
 
+// Sorting dice
+let sortButton = document.getElementById("sort-button")
+
+sortButton.addEventListener("click", function() {
+    let dice = document.querySelectorAll(".single-die")
+    let diceArray = Array.from(dice)
+    let sortedDice = diceArray.sort((a, b) => {
+        return a.innerText.localeCompare(b.innerText)
+    })
+    myDice.innerHTML = ""
+    sortedDice.forEach(die => {
+        myDice.appendChild(die)
+    })
+})
