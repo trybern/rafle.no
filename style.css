@@ -153,7 +153,11 @@ p {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+}
+
+.flex-row {
     margin: 2rem 0;
+    gap: 0.25rem;
 }
 
 button {
@@ -166,6 +170,7 @@ button {
     font-variation-settings: "wght" 500;
     letter-spacing: 0.015rem;
     font-size: 0.9rem;
+    border: transparent
 }
 
 .die-picker button {
@@ -191,20 +196,21 @@ button:hover {
 /* Terninger */
 
 .single-die {
-    font-size: 4rem;
+    font-size: 6rem;
     margin: 0;
 } 
 
-@media screen and (min-width: 769px) {
+/* @media screen and (min-width: 769px) {
     .single-die {
-        font-size: 5rem;
+        font-size: 6rem;
     }
-}
+} */
 
 .dice-row {
-    gap: 2rem 1rem;
+    gap: 2.5rem 0.5rem;
     color: var(--attention);
     height: fit-content;
+    margin: 0 0 3rem 0;
 }
 
 .testknapp {
