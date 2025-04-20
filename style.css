@@ -172,6 +172,7 @@ button {
     font-size: 0.9rem;
     border: transparent;
     cursor: pointer;
+    touch-action: manipulation;
 }
 
 #extra-actions > button {
