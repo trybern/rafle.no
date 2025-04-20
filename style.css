@@ -51,10 +51,6 @@ html {
 
 }
 
-body {
-    position: fixed;
-}
-
 body, html {
     margin: 0;
     padding: 0;

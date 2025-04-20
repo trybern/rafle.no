@@ -25,13 +25,12 @@
         <span id="my-dice" class="dice-row">
             <p>⚀ ⚁ ⚂ ⚃ ⚄ ⚅</p>
         </span>
-        <span style="" class="flex-row die-picker">
-            <button class="qtyButton" id="die-less" data-direction="-1"><p>&#8722;</p></button>
+        <span class="flex-row die-picker">
+            <button class="qtyButton" id="die-less" data-direction="-1">&#8722;</button>
             <!-- <input data-min="1" data-max="0" type="text" value="5" readonly="true" name="diceNumber" style="padding: 0.5rem; margin: 0.5rem;"> -->
             <p id="antall-terninger">0</p>
-            <button class="qtyButton" id="die-more" data-direction="1"><p>&#43;</p></button>
-            <button class="qtyButton" id="kasteknapp"><p>&#8635;
-            </p></button>
+            <button class="qtyButton" id="die-more" data-direction="1">&#43;</button>
+            <button class="qtyButton" id="kasteknapp">&#8635;</button>
         </span>
         <span id="extra-actions">
             <button id="sort-button">Sortér terninger</button>
@@ -40,8 +39,53 @@
     </section>
 
     <section id="introduksjon">
-        <h1 >Rafle</h2>
+        <h1>Rafle</h1>
             <p>Rafle (på engelsk <i>Liar's dice</i>) er et terningspill for to eller flere spillere, der målet er å bløffe om antallet og verdiene på terningene, samtidig som man prøver å avsløre andres bløff. I "single hand" har hver spiller sitt eget sett med terninger, mens i "common hand" bruker alle spillerne ett felles sett som går på rundgang. Spillet stammer fra 1400-tallet og spredte seg senere til Latin-Amerika og Europa.</p>
+    </section>
+
+    <section id="regler">
+        <h2>Regler</h2>
+        <p>Det finnes ulike måter å rafle på. Her er en enkel versjon Rafleforbundet anbefaler:</p>
+
+        <p>Når man rafler, går man rundt bordet og byr på hva som finnes av terninger. For eksempel kan man si "jeg tror det er syv 3-ere". Målet er å gjette riktig eller få andre til å gå for høyt og deretter si "nei, det er det ikke".</p>
+
+        <strong>Kortversjonen:</strong>
+
+        <ul>
+            <li>Alle kaster fem terninger, uten at andre kan se det</li>
+            <li>En etter en byr man på hvor mange terninger av ett slag som ligger felles på bordet</li>
+            <li>Til slutt sier noen "nei, det er det ikke", og man teller terninger på bordet</li>
+            <li>Den som tar feil, mister en terning</li>
+            <li>Man spiller til første spiller har mistet alle terninger. </p></li>
+        </ul>
+
+        <strong>En typisk runde:</strong>
+
+        <ul>
+            <li>Hver spiller har 5 terninger, og gjerne en kopp</li>
+            <li>Alle kaster terningene slik at motstanderne ikke kan se hva man lander på</li>
+            <li>Spiller A byr på hva hun tror det er av terninger på bordet: "jeg tror det er tre 4-ere"</li>
+            <li>Spiller B byr videre: "det er fire 4-ere"</li>
+            <li>Spiller C går opp på hva slags terninger det handler om: "jeg tror det er fire 5-ere"</li>
+            <li>Spiller D: "seks 6-ere</li>
+            <li>Spiller A sier "nei, det er det ikke"</li>
+            <li>Spiller A viser terningene sine først: ingen 6-ere</li>
+            <li>Spiller B viser sine: to 6-ere</li>
+            <li>Spiller C: én 6-er, en total på tre</li>
+            <li>Spiller D, til slutt: to 6-ere, vi ender på en total med fem 6-ere</li>
+            <li>Siden det ikke var seks 6-ere (eller fler), mister nå spiller D en terning</li>
+            <li style="opacity: 0.75">(Hadde det vært seks 6-ere (eller fler) hadde spiller A mistet en terning)</li>
+        </ul>
+
+        <strong>Annet:</strong>
+
+        <ul>
+            <li>1-ere (terninger som viser ett øye) teller som jokere: de er alle terninger</li>
+            <li>En må gå opp på antall terninger av et slag eller på hvilket slag, for eksempel kan man ikke si "seks 4-ere" eller noen har sagt "fem 5-ere"</li>
+            <li>Før man begynner blir man enige om man går med eller mot klokken (hvis man spiller en hel kveld er det bra å bytte for mer dynamisk spill)</li>
+        </ul>
+
+        </p>
     </section>
 
     <script src="scripts.js"></script>
