@@ -48,7 +48,6 @@ html {
     font-size: var(--font-base);
     background-color: var(--dark);
     color: var(--on-dark);
-
 }
 
 body, html {
@@ -186,7 +185,7 @@ button {
     font-size: 1.5rem;
 }
 
-.die-picker p:not(.die-picker button p) {
+.die-picker > p {
     width: 2rem;
     text-align: center;
     line-height: 100%;

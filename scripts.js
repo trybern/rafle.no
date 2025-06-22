@@ -1,67 +1,63 @@
+(function() {
+    'use strict';
 
+    // Terninger
+    let antall = 5;
+    const antallHTML = document.getElementById("antall-terninger");
+    const myDice = document.getElementById("my-dice");
+    const dieFaces = ["⚀", "⚁", "⚂", "⚃", "⚄", "⚅"];
+    let currentDice = [];
 
-// Terninger
-
-let antall = 5
-let antallHTML = document.getElementById("antall-terninger")
-let myDice = document.getElementById("my-dice")
-
-
-let die = ["⚀", "⚁", "⚂", "⚃", "⚄", "⚅"]
-
-function kastTerninger(noOfDice) {
-
-    let diceArray = ""
-
-    for (let i = 1; i <= noOfDice; i++) {
-        diceArray += `<p class="single-die">` + die[Math.floor(Math.random() * 6)] + `</p>`
+    function updateDiceCount() {
+        antallHTML.textContent = antall;
     }
 
-    console.log("kaster " + antall + " terninger")
-
-    myDice.innerHTML = diceArray;
-    antallHTML.innerHTML = antall
-}
-
-kastTerninger(antall)
-
-document.getElementById("kasteknapp").addEventListener("click", function() {kastTerninger(antall)})
-
-// Quantity Picker
-
-let oneLess = document.getElementById("die-less")
-let oneMore = document.getElementById("die-more")
-
-oneMore.addEventListener("click", addDie)
-oneLess.addEventListener("click", removeDie)
-
-function addDie() {
-    antall = antall + 1
-    antallHTML.innerHTML = antall;
-    /* kastTerninger(antall) */
-    console.log("Terning lagt til")
-}
-
-function removeDie() {
-    if (antall > 1) {
-        antall = antall - 1
-        antallHTML.innerHTML = antall;
-        /* kastTerninger(antall) */
-        console.log("Terning fjernet")
+    function kastTerninger(noOfDice) {
+        currentDice = [];
+        let diceHTML = "";
+        for (let i = 0; i < noOfDice; i++) {
+            const randomDie = dieFaces[Math.floor(Math.random() * dieFaces.length)];
+            currentDice.push(randomDie);
+            diceHTML += `<p class="single-die">${randomDie}</p>`;
+        }
+        myDice.innerHTML = diceHTML;
+        updateDiceCount();
     }
-}
 
-// Sorting dice
-let sortButton = document.getElementById("sort-button")
+    kastTerninger(antall);
 
-sortButton.addEventListener("click", function() {
-    let dice = document.querySelectorAll(".single-die")
-    let diceArray = Array.from(dice)
-    let sortedDice = diceArray.sort((a, b) => {
-        return a.innerText.localeCompare(b.innerText)
-    })
-    myDice.innerHTML = ""
-    sortedDice.forEach(die => {
-        myDice.appendChild(die)
-    })
-})
+    document.getElementById("kasteknapp").addEventListener("click", () => kastTerninger(antall));
+
+    // Quantity Picker
+    const oneLess = document.getElementById("die-less");
+    const oneMore = document.getElementById("die-more");
+
+    oneMore.addEventListener("click", addDie);
+    oneLess.addEventListener("click", removeDie);
+
+    function addDie() {
+        antall++;
+        updateDiceCount();
+    }
+
+    function removeDie() {
+        if (antall > 1) {
+            antall--;
+            updateDiceCount();
+        }
+    }
+
+    // Sorting dice
+    const sortButton = document.getElementById("sort-button");
+
+    sortButton.addEventListener("click", function() {
+        currentDice.sort((a, b) => a.localeCompare(b));
+        
+        let sortedDiceHTML = "";
+        currentDice.forEach(die => {
+            sortedDiceHTML += `<p class="single-die">${die}</p>`;
+        });
+        myDice.innerHTML = sortedDiceHTML;
+    });
+
+})();
