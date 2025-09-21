@@ -170,10 +170,17 @@ button {
     touch-action: manipulation;
 }
 
+#extra-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--xs);
+}
+
 #extra-actions > button {
     background-color: var(--dark-accent);
     color: var(--on-dark);
     padding: 0.5rem 1rem;
+    width: fit-content;
 }
 
 #extra-actions > button:hover {
@@ -221,17 +228,12 @@ button:hover {
     margin: 0 0 3rem 0;
 }
 
-.testknapp {
-    background-color: var(--light);
-    color: var(--on-light);
-}
-
-.testknapp:hover {
-    background-color: var(--light-accent);
-    color: var(--dark-accent);
-}
-
 .ease1 {
     transition: all cubic-bezier(.7, 0, .3, 1) 100ms;
 }
 
+.hidden {
+    color: var(--dark);
+    -webkit-user-select: none;
+    user-select: none;
+}

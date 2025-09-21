@@ -60,4 +60,11 @@
         myDice.innerHTML = sortedDiceHTML;
     });
 
+    // Sorting dice
+    const hideButton = document.getElementById("hide-button");
+    
+    hideButton.addEventListener("click", function() {
+        myDice.classList.toggle("hidden")
+    });
+
 })();
